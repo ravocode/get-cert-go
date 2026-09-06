@@ -3,6 +3,8 @@
 [![CI](https://github.com/ravocode/get-cert-go/actions/workflows/ci.yml/badge.svg)](https://github.com/ravocode/get-cert-go/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
+![getcertgo](/img/logo.jpeg)
+
 A developer utility for fetching, inspecting, and trusting remote TLS
 certificates — so you stop wrestling with raw `keytool`/`openssl` incantations
 to fix `ValidatorException: PKIX path building failed` against internal servers.

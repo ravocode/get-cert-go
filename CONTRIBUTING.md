@@ -33,7 +33,7 @@ internal/
 ## Running tests
 
 ```sh
-go test -v -race ./...
+go test -v ./...
 ```
 
 ## Code style

@@ -1,7 +1,7 @@
 package keystore
 
 import (
-	"crypto/rand"
+
 	"crypto/x509"
 	"fmt"
 	"os"
@@ -104,7 +104,7 @@ func addPKCS12(path, password, alias string, cert *x509.Certificate) error {
 	}
 	entries = append(entries, pkcs12.TrustStoreEntry{Cert: cert, FriendlyName: alias})
 
-	out, err := pkcs12.EncodeTrustStoreEntries(rand.Reader, entries, password)
+	out, err := pkcs12.LegacyRC2.EncodeTrustStoreEntries(entries, password)
 	if err != nil {
 		return fmt.Errorf("encoding PKCS12 trust store: %w", err)
 	}

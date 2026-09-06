@@ -57,6 +57,8 @@ func safeFileBase(cert *x509.Certificate, name string) string {
 // writeTempPEM writes the certificate to a temporary .pem file and returns its
 // path plus a cleanup function. Used by platforms that pass a file path to an
 // external tool (Windows certutil, macOS security).
+//
+//nolint:unused // Used by darwin and windows, but golangci-lint runs on linux.
 func writeTempPEM(cert *x509.Certificate, name string) (string, func(), error) {
 	f, err := os.CreateTemp("", safeFileBase(cert, name)+"-*.pem")
 	if err != nil {

@@ -1,7 +1,7 @@
 package keystore
 
 import (
-	"crypto/rand"
+
 	"crypto/x509"
 	"io"
 	"os"
@@ -333,7 +333,7 @@ func p12EncodeTrustStoreEntries(entries []p12TrustEntry, password string) ([]byt
 			FriendlyName: e.Name,
 		})
 	}
-	return pkcs12.EncodeTrustStoreEntries(rand.Reader, converted, password)
+	return pkcs12.LegacyRC2.EncodeTrustStoreEntries(converted, password)
 }
 
 type p12TrustEntry struct {

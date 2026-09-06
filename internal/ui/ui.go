@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/AlecAivazis/survey/v2"
+	survey "github.com/AlecAivazis/survey/v2"
 	"github.com/fatih/color"
 
 	"github.com/ravocode/get-cert-go/internal/certs"

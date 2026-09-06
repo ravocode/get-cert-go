@@ -1,0 +1,8 @@
+# Build output
+/getcertgo
+/getcertgo.exe
+/dist/
+
+# Test keystores
+*.p12
+*.jks
